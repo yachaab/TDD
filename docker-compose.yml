@@ -1,0 +1,23 @@
+services:
+  movies:
+    build: ./app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./app/:/usr/src/app/
+    ports:
+      - 8009:8000
+    env_file:
+      - ./app/.env.dev
+    depends_on:
+      - movies-db
+  movies-db:
+    image: postgres:17-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=usfachb
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=movies_dev
+
+volumes:
+  postgres_data:

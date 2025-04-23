@@ -1,0 +1,15 @@
+.venv
+.env
+docker.sh
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+*.egg-info/
+*.egg
+*.DS_Store
+*.coverage
+*.mypy_cache/
+*.pytest_cache/
