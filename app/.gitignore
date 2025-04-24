@@ -13,3 +13,6 @@ __pycache__/
 *.coverage
 *.mypy_cache/
 *.pytest_cache/
+tests
+pytest*
+*.json

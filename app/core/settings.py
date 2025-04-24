@@ -128,3 +128,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Use a custom user model from movies app
 AUTH_USER_MODEL = 'movies.CustomUser'
+
+# The browsable API is typically disabled for security and performance reasons.
+# Only JSON responses are returned, which is standard for production APIs
+if not DEBUG:
+    REST_FRAMEWORK = {
+        "DEFAULT_RENDERER_CLASSES": (
+            "rest_framework.renderers.JSONRenderer",
+        )
+    }
