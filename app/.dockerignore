@@ -2,3 +2,11 @@
 .gitignore
 docker.sh
 seed.json
+.venv
+.pytest_cache
+Dockerfile
+Dockerfile.prod
+tests
+entrypoint.sh
+pytest.ini
+.gitignore
